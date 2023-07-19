@@ -5,15 +5,22 @@ spring:
   application:
     name: mall-demo
   datasource:
-    url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://test.xiaocheng.com:5306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
-    password: root
+    password: D7txumqc2b!
+  redis:
+    host: test.xiaocheng.com # Redis服务器地址
+    database: 0 # Redis数据库索引（默认为0）
+    port: 16379 # Redis服务器连接端口
+    password: x5u3p2x2j0g7m2 # Redis服务器连接密码（默认为空）
+    timeout: 300ms # 连接超时时间（毫秒）
   thymeleaf:
     mode: HTML5
     encoding: utf-8
     servlet:
       content-type: text/html
     cache: false #开发时关闭缓存,不然没法看到实时页面
+    check-template-location: false
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
